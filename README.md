@@ -8,11 +8,11 @@ To run:
 3. Use the following file permissions: Inside wwwroot: 701, outside wwwroot: directories 703 & files 704
 
 Or host somewhere else:
-* host with github pages for free, e.g.: https://max-lovell.github.io/gfactor/metacor/survey/survey.html
-* However, if data is from outside the server where data is stored, the folder with the PHP file may need a .htaccess file as well (applies to Apache servers only):<br>
+* github pages is free e.g.: https://max-lovell.github.io/gfactor/metacor/survey/survey.html [but see URL shanges to PHP below]
+* However, if data is recieved from outside the server where data is stored, the folder with the PHP file may need a .htaccess file as well (applies to Apache servers only):<br>
   `Header set Access-Control-Allow-Origin "[YOUR SERVER URL ORIGIN]"`<br>
   `Header set Access-Control-Allow-Headers "Content-Type"`
-* working on a more accessible data storage solution. N=100 will give you ~0.06GB of data so lots of free trial options should work.
+* working on a more accessible non-personal server space data storage solution. N=100 will give you ~0.06GB of data so lots of free trial options should work, or google drive maybe.
 
 Notes:
 * If changing folder structure make note of following URLs and file paths:
