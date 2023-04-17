@@ -11,14 +11,18 @@ To run:
 2. Make a folder outside the wwwroot called 'meta_cor_data'
 3. Use the following file permissions: Inside wwwroot: 701, outside wwwroot: directories 703 & files 704
 
+Or host somewhere else:
+* host with github pages for free, e.g.: https://max-lovell.github.io/gfactor/metacor/survey/survey.html
+* However, if data is from outside the server where data is stored, the folder with the PHP file may need a .htaccess file as well (applies to Apache servers only):<br>
+  `Header set Access-Control-Allow-Origin "[YOUR SERVER URL ORIGIN]"`<br>
+  `Header set Access-Control-Allow-Headers "Content-Type"`
+
 Notes:
 * If changing folder structure make note of following URLs and file paths:
   1. JavaScript: add another '([^\/]*\/)' to 'const path = loc.pathname.match(/(\/[^\/]*\/)([^\/]*\/)/ig)' as many times as the levels deep your files are located.
   2. PHP: 'file_put_contents("../../../meta_cor_data/$file_name.json", $data);' should point from script location to a folder outside your wwwroot and change '../../../' for how many levels deep your files are located
 * 'End' has had links to SONA and Prolific removed, which can be used for automatic credit granting.
-* If you wish to host the task somwhere else, the folder with the PHP file may need a .htaccess file as well (applies to Apache servers only):<br>
-`Header set Access-Control-Allow-Origin "[YOUR SERVER URL ORIGIN]"`<br>
-`Header set Access-Control-Allow-Headers "Content-Type"`
+
 
 Try it out here: https://users.sussex.ac.uk/mel29/metacor/survey/survey.html<br>
 Note if accessing tasks directly, Gabor and Dots functions require the pixels-per-CM query string ?px_cm= to work e.g. dots.html?px_cm=47, but errors will be thrown on data saving if doing so.<br>
