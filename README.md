@@ -1,10 +1,6 @@
 # Metacognition g-factor study
-
-This study consists of an initial survey, 4 cognitive tasks in a random order, and an ending screen.<br>
-More details coming soon as manuscript currently being written.
-
-In the interest of Open Science, these materials are duly presented in their entirety.<br>
-Please change the contact details, and participant information and consent sheets if running a replication.
+This study consists of an initial survey, 4 cognitive tasks in a random order, and an ending screen. More details coming soon as manuscript currently being written.<br>
+These materials are presented mostly in their entirety as a record of the associated study. Please change the contact details, and participant information and consent sheets if deploying them yourself.
 
 To run:
 1. Place the metacor folder in the top level of wwwroot (e.g. public_html) of your server space
