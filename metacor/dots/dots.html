@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dots Task</title>
+        <link href="dots.css" rel="stylesheet" type="text/css"/>
+    </head>
+        <p id="text_display" class="centred">In this task you will be shown two boxes with different amount of dots in them.
+            The boxes will appear to flicker as they show 5 random arrangements of the dots.
+            <strong>Your task is to indicate which box has more dots in it.</strong><br><br>
+            The first 20 trials are practice trials with feedback. 
+            The subsequent 100 trials will be ask you to rate your confidence in your response.
+            Please try to use the entire confidence scale throughout the task if you can.<br><br>
+            Please press the spacebar or click anywhere to begin.
+        </p>
+        <div id="fix_cross" hidden><span id="cross"  class="centred">+</span></div>
+        <div id="stim_container"  class="centred" hidden>
+            <div id="stim_grid">
+                <canvas class="stim" id="left"></canvas>
+                <canvas class="stim" id="right"></canvas>
+            </div>
+            <p id="prompt">Press <strong>e</strong> if the box on the left had more dots.<br>
+                Press <strong>i</strong> if the box on the right had more dots.<br>
+                Or click/touch the box with more dots.
+            </p>
+        </div>
+        <div id="conf_cont" class="centred" hidden>
+            <label for="confidence" id="conf_lab">Rate your confidence in your response:</label><br>
+                <span id="conf_instr">Drag the slider, or use the number or arrow keys<br>then press 'Enter' or click the button to submit.</span><br><br>
+                <input type="range" id="conf_sl" name="confidence" min="1" max="5" value="1"><br>
+                <div id="likert_labs">
+                    <span class="likert_item">Pure guess</span>
+                    <span class="likert_item">More or less guessing</span>
+                    <span class="likert_item">Somewhat confident</span>
+                    <span class="likert_item">Almost sure</span>
+                    <span>Certain</span>
+                </div><br>
+                <span id="conf_val">1</span><br><br>
+                <input type="button" id="conf_b" class="button" value="Submit">
+          </div>
+        <script src="dots.js"></script>
+    </body>
+</html>

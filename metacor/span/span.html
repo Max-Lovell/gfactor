@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digit Span Task</title>
+    </head>
+    <link rel='stylesheet' href='span.css'>
+    <body>
+        <p id="text_disp" class="centred">In this task, you will be shown a sequence of digits, one at a time.
+            <strong>You will then be presented with a single string of numbers, and will be asked to decide if these are the same sequence as the numbers previously shown one-by-one.</strong>
+            On some trials, the string of numbers will have one digit changed. The length of this string of numbers will change throughout the task.<br><br>
+            The first 20 trials are practice trials with feedback.
+            The subsequent 50 trials will be ask you to rate your confidence in your response. 
+            Following this, the task will switch to a second variant, again with 20 practice and 50 confidence trials. 
+            Please try to use the entire confidence scale throughout the task if you can.<br><br>
+            Please press the spacebar or click anywhere to begin.
+        </p>
+        <div id="encoding_disp" class="centred" hidden></div>
+        <div id="stim_cont" class="centred" hidden>
+            <p id="stim_instr">Is this the number just displayed?</p>
+            <div id="stim_grid">
+                <div id="l_stim" class="stim"></div>
+                <div id="m_stim" class="stim"></div>
+                <div id="r_stim" class="stim"></div>
+            </div>
+            <p id="input_instr"><small><i>Answer 'Yes' or 'No' by pressing <strong>Y</strong> or <strong>N</strong> on your keyboard, or click the buttons below</i></small></p>
+            <div id="buttons">
+                <div class="b_div"><input type="button" value="Yes" id="left" class="button"></div>
+                <div class="b_div"><input type="button" value="No" id="right" class="button"></div>
+            </div>
+        </div> 
+        <div id="conf_cont" class="centred" hidden>
+            <label for="confidence" id="conf_lab">Rate your confidence in your response:</label><br>
+                <span id="conf_instr">Drag the slider, or use the number or arrow keys<br>then press 'Enter' or click the button to submit.</span><br><br>
+                <input type="range" id="conf_sl" name="confidence" min="1" max="5" value="1"><br>
+                <div id="likert_labs">
+                    <span class="likert_item">Pure guess</span>
+                    <span class="likert_item">More or less guessing</span>
+                    <span class="likert_item">Somewhat confident</span>
+                    <span class="likert_item">Almost sure</span>
+                    <span>Certain</span>
+                </div><br>
+                <span id="conf_val">1</span><br><br>
+                <input type="button" id="conf_b" class="button" value="Submit">
+          </div>      
+    </body>
+    <script src="span.js"></script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en-GB'>
+    <head>
+        <title>Breath Counting Task</title>
+        <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'> -->
+        <link rel='stylesheet' href='breath.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="container">
+            <div class="half_div" id="instructions_container">
+                <p id="instructions">
+                    <i>Please read these instructions thoroughly.</i><br><br>
+                    The aim of this task is to see how well you can count your breathing. 
+                    In this task you will be counting your breaths from 1-9. 
+                    <strong>An <i>in and out</i> breath count as 1 breath.</strong> 
+                    You can press/click the arrows on the right, or use your keyboard arrows:
+                    <ul>
+                        <li>Press <strong style="color:green;">UP</strong> for each of the first 8 breaths in a sequence</li>
+                        <li>Press <strong style="color:green;">DOWN</strong> for the 9th breath</li>
+                    </ul>
+                    <strong>After each breath, indicate if you are confident you are still on the correct count</strong>:
+                    <ul>
+                        <li>Press <strong style="color:green;">LEFT</strong> if you are unsure if you are on the correct count.</li>
+                        <li>Press <strong style="color:green;">RIGHT</strong> if you are sure you are on the correct count.</li>
+                        <li>e.g. <i>Breath 1: up, right. 2: up, right</i>... or <i>up</i> then <i>left</i> if you are not sure you have counted correctly.</li>
+                        <li>You can change your confidence rating by entering in a new one before you press the next breath button.</li>
+                        <li>Press <strong style="color:red;">SPACEBAR</strong> to reset and start counting from 1 if you are sure you've lost count.</li>
+                    </ul>
+                    You don't have to close your eyes or control your breathing, but only count in your head and not on your fingers.
+                    There is a 2 minute practice with feedback, and the main task lasts 15 minutes. 
+                    Please turn your sound on so you can hear the feedback on incorrect button presses.<br>
+                    <p><i style="font-size:80%">When piloting this study, a high number of participants were spamming buttons in this task, or didn't read task instructions. 
+                    Please remember this experiment is for inclusion in my PhD thesis and is the culmination of years of work. 
+                    Not attempting to do the task properly will make analysis far more difficult. 
+                    If you don't wish to genuinely take part in the experiment please close this page.</i></p>
+                </p>
+                <button type='button' id='ini_button'>Click here to begin the <span id='button_text'>practice trials</span></button>
+                <p>Time left in <span id='timer_text'>practice</span>: <strong><span id='timer'>02:00</span></strong></p>
+            </div>
+            <div class="half_div" id="arrows_container">
+                <div id="arrows_grid">
+                    <div class="label up" id="eight">1-8</div>
+                    <div class="arrow up" id="ArrowUp">&#8679;</div>
+                    <div class="label down" id="nine">9</div>
+                    <div class="arrow down" id='ArrowDown'>&#8681;</div>
+                    <div class="label left" id="unsure">Unsure</div>
+                    <div class='arrow left' id='ArrowLeft'>&#8678;</div>
+                    <div class="label space" id="spacebar">Spacebar</div>
+                    <div class='text space' id='reset'>RESET</div>
+                    <div class="label right" id="sure">Sure</div>
+                    <div class='arrow right' id='ArrowRight'>&#8680;</div>
+                    <div id='key_presses' class="row">e.g. Breath 1: Sure. Breath 2: Sure. Breath 3: Unsure... Breath 9: Unsure</div>
+                </div>
+            </div>
+        </div>
+        <script src="breath.js"></script>
+    </body>
+</html>

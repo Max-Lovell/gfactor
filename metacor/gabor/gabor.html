@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Gabor Task</title>
+      <link rel='stylesheet' href='gabor.css'>
+  </head>
+  <body>
+    <p id="instr" class="centred">In this task, you will be shown a circular configuration of 6 images.
+      <strong>Your task is to decide if one of the 6 images was of higher contrast than the others.</strong>
+      Please sit in a location where you can easily see your screen, 
+      and try not to adjust the brightness of your screen after the first few trials.<br><br>
+      The first 20 trials are practice trials with feedback. 
+      The subsequent 50 trials will be ask you to rate your confidence in your response. 
+      Following this, the task will switch to a second variant, again with 20 practice and 50 confidence trials.
+      Please try to use the entire confidence scale throughout the task if you can.<br><br>
+      Please press the spacebar or click anywhere to begin.
+    </p>
+    <canvas id="fix_cont" class="centred" hidden></canvas>
+    <div id='resp' class="centred" hidden>
+      <p id='resp_text'>Did the image contain a patch with higher contrast?<br>
+        <small><i>Answer 'yes' or 'no' by pressing <strong>Y</strong> or <strong>N</strong> on your keyboard, or click the buttons below</i></small>
+      </p>
+      <div id="buttons">
+        <div class="b_div"><input type="button" value="Yes" id="left" class="button"></div>
+        <div class="b_div"><input type="button" value="No" id="right" class="button"></div>
+      </div>
+    </div>
+    <canvas id="present" class="centred stim" hidden></canvas>
+    <canvas id="absent" class="centred stim" hidden></canvas>
+    <div id="conf_cont" class="centred" hidden>
+      <label for="confidence" id="conf_lab">Rate your confidence in your response:</label><br>
+          <span id="conf_instr">Drag the slider, or use the number or arrow keys<br>then press 'Enter' or click the button to submit.</span><br><br>
+          <input type="range" id="conf_sl" name="confidence" min="1" max="5" value="1"><br>
+          <div id="likert_labs">
+              <span class="likert_item">Pure guess</span>
+              <span class="likert_item">More or less guessing</span>
+              <span class="likert_item">Somewhat confident</span>
+              <span class="likert_item">Almost sure</span>
+              <span>Certain</span>
+          </div><br>
+          <span id="conf_val">1</span><br><br>
+          <input type="button" id="conf_b" class="button" value="Submit">
+    </div>
+  </body>
+  <script src="gabor.js"></script>
+</html>
