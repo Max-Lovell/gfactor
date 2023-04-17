@@ -9,6 +9,7 @@ To run:
 
 Or host somewhere else:
 * host with github pages for free, e.g.: https://max-lovell.github.io/gfactor/metacor/survey/survey.html
+* working on a free data storage solution. N=100 will give you ~0.06GB of data so lots of free trial options should work.
 * However, if data is from outside the server where data is stored, the folder with the PHP file may need a .htaccess file as well (applies to Apache servers only):<br>
   `Header set Access-Control-Allow-Origin "[YOUR SERVER URL ORIGIN]"`<br>
   `Header set Access-Control-Allow-Headers "Content-Type"`
