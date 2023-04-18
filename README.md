@@ -8,7 +8,7 @@ To run:
 3. Use the following file permissions: Inside wwwroot: 701, outside wwwroot: directories 703 & files 704
 
 Or host somewhere else:
-* github pages is free e.g.: https://max-lovell.github.io/gfactor/metacor/survey/survey.html [but see URL shanges to PHP below]
+* github pages is free e.g.: https://max-lovell.github.io/gfactor/metacor/survey/survey.html [but see URL changes to PHP below]
 * However, if data is recieved from outside the server where data is stored, the folder with the PHP file may need a .htaccess file as well (applies to Apache servers only):<br>
   `Header set Access-Control-Allow-Origin "[YOUR SERVER URL ORIGIN]"`<br>
   `Header set Access-Control-Allow-Headers "Content-Type"`
