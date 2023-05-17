@@ -1,4 +1,4 @@
-# Metacognition g-factor study
+# Metacognition g-factor study 
 This study consists of an initial survey, 4 cognitive tasks in a random order, and an ending screen. More details coming soon as manuscript currently being written.<br>
 These materials are presented mostly in their entirety as a record of the associated study. Please change the contact details, and participant information and consent sheets if deploying them yourself. Note: fix for Breath Task issue on Safari on MacBooks and data saving options coming soon.
 
