@@ -37,7 +37,7 @@ for(t in task_names){ #t<-task_names[4]
   task <- c()
   for(f in task_files){ #f<-task_files[1]
     file <- fromJSON(paste0("data/",f))
-    if(length(file)==0){print(f);next} #print names of incorrect files
+    if(length(file)==0){print(f);next} #only an issue if no responses given in breath task
     file$ID <- sub("\\D+","",f)
     if(t=='survey'){ file <- data.frame(file) }
     task <- rbind(task,file)
