@@ -28,6 +28,7 @@ I am working on making this approach as easily deployable as possible, please le
 
 To compile a dataset in R, with data in a subfolder of the R file directory called 'data':
 ```
+require('jsonlite')
 task_names <- c("survey","dots","gabor","span","breath")
 all_files <- list.files("data/")
 tasks_raw <- list()
@@ -46,6 +47,5 @@ for(t in task_names){ #t<-task_names[4]
 }
 names(tasks_raw) <- task_names
 ```
-
 
 Contact: m.lovell [at] sussex.ac.uk
