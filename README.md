@@ -20,11 +20,32 @@ Notes:
   2. PHP: 'file_put_contents("../../../meta_cor_data/$file_name.json", $data);' should point from script location to a folder outside your wwwroot and change '../../../' for how many levels deep your files are located
 * 'End' has had links to SONA and Prolific removed, which can be used for automatic credit granting.
 
-
 Try it out here: https://users.sussex.ac.uk/mel29/metacor/survey/survey.html<br>
 Note if accessing tasks directly, Gabor and Dots functions require the pixels-per-CM query string ?px_cm= to work e.g. dots.html?px_cm=47, but errors will be thrown on data saving if doing so.<br>
 The actual study is currently live: https://users.sussex.ac.uk/mel29/survey/survey.html - please don't send data across if not taking part in the study!<br>
 
 I am working on making this approach as easily deployable as possible, please let me know if the above doesn't work for you.<br>
+
+To compile a dataset in R, with data in a subfolder of the R file directory called 'data':
+```
+task_names <- c("survey","dots","gabor","span","breath")
+all_files <- list.files("data/")
+tasks_raw <- list()
+for(t in task_names){ #t<-task_names[4]
+  task_files <- all_files[grep(t,all_files)]
+  task <- c()
+  for(f in task_files){ #f<-task_files[1]
+    file <- fromJSON(paste0("data/",f))
+    if(length(file)==0){print(f);next} #print names of incorrect files
+    file$ID <- sub("\\D+","",f)
+    if(t=='survey'){ file <- data.frame(file) }
+    task <- rbind(task,file)
+  }
+  write.csv(data.frame(apply(task,2,as.character)),paste0(t,".csv"))#convert to character so commas are correct in CSV
+  tasks_raw <- c(tasks_raw,list(task))
+}
+names(tasks_raw) <- task_names
+```
+
 
 Contact: m.lovell [at] sussex.ac.uk
